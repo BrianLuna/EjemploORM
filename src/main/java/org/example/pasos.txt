@@ -1,0 +1,34 @@
+1) Descargar e instalar MySQL 8
+
+2) Descargar e instalar Workbench
+
+3) Dependencias:
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.6.1.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.33</version>
+        </dependency>
+
+4) Ir a Project Structura/Facets y agregar Hibernate y crear el descriptor
+   Pegar dentro del descriptor el código que dejo en el aula virtual, cambiando los datos de sus propias bd
+
+5) Descargar el archivo HibernateUtil.java del aula virtual y pegarlo dentro de nuestro proyecto
+
+6) Empezar a mapear.
+a) Todas las clases que se almacenen, tienen que tener @Entity
+b) Todas las clases deber implementar Serializable
+b) Todas las clases tienen que tener un contructor vacío
+b) Todos los atributos tienen que tener getters y setters
+b) Los enum tienen que tener @enumerated con el enumType
+c) Las listas cuyos elementos son simples (Integer, String, etc) deben tener @ElementCollection
+d) Cada vez que deba persisistir una nueva clase, hay que agregarla en el xml
+e) Las relaciones OneToOne llevan @OneToOne. Hay que poner el cascade con el CascadeType.
+f) Con @Column podemos cambiar nombre de columna o @JoinColumn para columnas de relaciones
+g) @OneToMany para relaciones uno a muchos. También requiere el cascade
+h) @ManyToOne para relaciones muchos a uno. Tambien requiere el cascade
