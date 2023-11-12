@@ -16,7 +16,7 @@
         </dependency>
 
 4) Ir a Project Structura/Facets y agregar Hibernate y crear el descriptor
-   Pegar dentro del descriptor el código que dejo en el aula virtual, cambiando los datos de sus propias bd
+   Pegar dentro del descriptor el código que se encuentra dentro del proyecto de ejemplo (este proyecto) y reemplazar por los valores de tu base de datos.
 
 5) Descargar el archivo HibernateUtil.java del aula virtual y pegarlo dentro de nuestro proyecto
 
